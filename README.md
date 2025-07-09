@@ -226,3 +226,5 @@ Our most effective model was the **simplest one**:
 * No label smoothing or scheduler
 
 Through our experiments, we discovered that adversarial training rewards simplicity over complex regularization techniques. We also found that more epochs can harm robustness by causing overfitting to adversarial examples, which negatively impacts generalization on clean inputs. Additionally, label smoothing and heavy augmentation were detrimental to our model's performance, suggesting that these techniques may introduce unwanted distribution shifts in the adversarial training context.
+
+https://github.com/abaadm1/TML25_A3_22/releases/tag/assignment-03-final
