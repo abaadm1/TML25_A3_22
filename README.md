@@ -13,12 +13,9 @@ We present a detailed breakdown of our successful approach, failed experiments, 
 
 ### Repository Contents
 
-* `robust_train.py` — Main training script
+* `adversarial_training.ipynb` — Main training notebook
 * `robust_model.pt` — Final model checkpoint
-* `Train.pt` — Provided training dataset
-* `submit.py` — Evaluation endpoint submission
-* `eval_assertions.py` — Local model validator
-* `requirements.txt` — Reproducibility file
+  Link provided for .pt https://drive.google.com/drive/folders/1a5Zi9YSve0wRAJx-UpV1Rk1mHdnlAN9n
 
 ---
 
