@@ -1,10 +1,3 @@
-# Assignment 03: Robustness Report
-
-**Trustworthy Machine Learning – SS 2025**
-**Team: [Your Team Number]**
-**Authors: [Your Name(s)]**
-
----
 
 ## 1. Introduction
 
@@ -63,7 +56,7 @@ transform = transforms.Compose([
 
 ---
 
-## 3. Working Robust Training Strategy ✅
+## 3. Working Robust Training Strategy 
 
 ### 3.1 Model
 
@@ -146,7 +139,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 ---
 
-## 4. Failed Experimental Approaches ❌
+## 4. Failed Experimental Approaches
 
 We experimented with several regularization techniques that ultimately **reduced accuracy** below the 50% threshold:
 
@@ -209,16 +202,16 @@ We discovered that **running for more than 20 epochs consistently led to evaluat
 
 | Epochs | Clean Accuracy | Eval Status |
 | ------ | -------------- | ----------- |
-| 10     | ✅ ≥ 50%        | ✅ Accepted  |
-| 20     | ✅ Around 50%   | ✅ Accepted  |
-| 30+    | ❌ < 50%        | ❌ Rejected  |
-| 50     | ❌ Low accuracy | ❌ Rejected  |
+| 10     |  ≥ 50%        |  Accepted  |
+| 20     |  Around 50%   |  Accepted  |
+| 30+    |  < 50%        |  Rejected  |
+| 50     |  Low accuracy |  Rejected  |
 
 This suggests **overfitting to adversarial examples**, hurting generalization on clean inputs. Shorter training (10–20 epochs) yielded the best balance.
 
 ---
 
-## 7. Evaluation Results ✅
+## 7. Evaluation Results 
 
 Final submission:
 
@@ -249,12 +242,6 @@ Key lessons learned:
 * More epochs can harm robustness
 * Label smoothing and heavy augmentation were detrimental
 
-Future directions:
-
-* Use TRADES/MART loss
-* Try adversarial weight perturbation
-* Evaluate different PGD step sizes adaptively
-
 ---
 
 ## 9. Submission Info
@@ -266,5 +253,5 @@ Future directions:
 | Checkpoint | `robust_model.pt`                     |
 | Endpoint   | `http://34.122.51.94:9090/robustness` |
 
-✅ Assertions passed
-✅ Model submitted and accepted
+Assertions passed
+Model submitted and accepted
