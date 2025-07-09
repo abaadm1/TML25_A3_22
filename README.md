@@ -120,21 +120,13 @@ This simple strategy yielded the best trade-off between clean and adversarial pe
 
 | Parameter     | Value |
 | ------------- | ----- |
-| Epochs        | 10    |
+| Epochs        | 15    |
 | Batch Size    | 32    |
 | Optimizer     | Adam  |
 | Learning Rate | 0.001 |
 | Epsilon       | 0.03  |
 | PGD α         | 0.01  |
 | PGD Steps     | 3     |
-
-Training device was automatically selected via:
-
-```python
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-```
-
----
 
 ## 4. Failed Experimental Approaches
 
