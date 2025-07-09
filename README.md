@@ -225,22 +225,4 @@ Our most effective model was the **simplest one**:
 * Uniform loss averaging
 * No label smoothing or scheduler
 
-Key lessons learned:
-
-* Adversarial training rewards simplicity
-* More epochs can harm robustness
-* Label smoothing and heavy augmentation were detrimental
-
----
-
-## 9. Submission Info
-
-| Field      | Value                                 |
-| ---------- | ------------------------------------- |
-| Model Name | `resnet18`                            |
-| Token      | `12910150`                            |
-| Checkpoint | `robust_model.pt`                     |
-| Endpoint   | `http://34.122.51.94:9090/robustness` |
-
-Assertions passed
-Model submitted and accepted
+Through our experiments, we discovered that adversarial training rewards simplicity over complex regularization techniques. We also found that more epochs can harm robustness by causing overfitting to adversarial examples, which negatively impacts generalization on clean inputs. Additionally, label smoothing and heavy augmentation were detrimental to our model's performance, suggesting that these techniques may introduce unwanted distribution shifts in the adversarial training context.
